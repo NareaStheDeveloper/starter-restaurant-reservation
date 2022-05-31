@@ -1,5 +1,5 @@
 const knex = require("../db/connection");
-
+//updates 
 function update(table_id, reservation_id) {
   return knex.transaction(async (transaction) => {
     await knex("reservations")
