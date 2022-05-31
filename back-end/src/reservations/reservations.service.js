@@ -4,7 +4,7 @@ function list() {
   return knex("reservations")
     .select("*")
     .whereNotIn("status", ["finished", "cancelled"])
-  //  .orderBy("reservations.reservation_date");
+    .orderBy("reservations.reservation_date");
 }
 //creates a new reservation
 function create(reservation) {
