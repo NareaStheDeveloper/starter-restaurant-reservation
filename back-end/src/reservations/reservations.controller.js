@@ -1,8 +1,6 @@
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const service = require("./reservations.service");
-const dateTime = require("../utils/date-time");
 
-const { today } = dateTime;
 
 //valid properties to look for 
 const VALID_PROPS = [
@@ -157,7 +155,7 @@ const reservationExists = async (req, res, next) => {
   res.json({ data });
 } */
 async function list(req, res) {
-   const currentDay = today();
+   const currentDay = new Date();
   const { date, mobile_number } = req.query;
   let reservations;
   if (mobile_number) {

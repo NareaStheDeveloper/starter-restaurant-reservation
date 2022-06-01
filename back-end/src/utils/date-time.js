@@ -1,3 +1,5 @@
+
+
 const dateFormat = /\d\d\d\d-\d\d-\d\d/;
 const timeFormat = /\d\d:\d\d/;
 
@@ -25,7 +27,7 @@ function asDateString(date) {
  * @returns {*}
  *  the specified date string formatted as YYYY-MM-DD
  */
-export function formatAsDate(dateString) {
+function formatAsDate(dateString) {
   return dateString.match(dateFormat)[0];
 }
 
@@ -36,7 +38,7 @@ export function formatAsDate(dateString) {
  * @returns {*}
  *  the specified time string formatted as YHH:MM.
  */
-export function formatAsTime(timeString) {
+function formatAsTime(timeString) {
   return timeString.match(timeFormat)[0];
 }
 
@@ -45,7 +47,7 @@ export function formatAsTime(timeString) {
  * @returns {*}
  *  the today's date formatted as YYYY-MM-DD
  */
-export function today() {
+function today() {
   return asDateString(new Date());
 }
 
@@ -56,7 +58,7 @@ export function today() {
  * @returns {*}
  *  the date one day prior to currentDate, formatted as YYYY-MM-DD
  */
-export function previous(currentDate) {
+function previous(currentDate) {
   let [year, month, day] = currentDate.split("-");
   month -= 1;
   const date = new Date(year, month, day);
@@ -72,7 +74,7 @@ export function previous(currentDate) {
  * @returns {*}
  *  the date one day after currentDate, formatted as YYYY-MM-DD
  */
-export function next(currentDate) {
+function next(currentDate) {
   let [year, month, day] = currentDate.split("-");
   month -= 1;
   const date = new Date(year, month, day);
@@ -82,7 +84,7 @@ export function next(currentDate) {
 }
 
 //Time-based validation for creating and updating reservations
-export function isNotOnTuesday(reservation_date, errors) {
+function isNotOnTuesday(reservation_date, errors) {
   const [year, month, day] = reservation_date.split("-");
   const date = new Date(`${month} ${day}, ${year}`);
   if (date.getDay() === 2) {
@@ -90,7 +92,7 @@ export function isNotOnTuesday(reservation_date, errors) {
   }
 }
 
-export function isInTheFuture(reservation_date, errors) {
+function isInTheFuture(reservation_date, errors) {
   const [year, month, day] = reservation_date.split("-");
   const date = new Date(`${month} ${day}, ${year}`);
   const today = new Date();
@@ -98,3 +100,5 @@ export function isInTheFuture(reservation_date, errors) {
     errors.push(<li key="past">Reservation must be in the future</li>);
   }
 }
+
+export default all;
