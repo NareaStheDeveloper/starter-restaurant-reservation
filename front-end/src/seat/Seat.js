@@ -64,7 +64,7 @@ export default function Seat() {
         <h3>Select Table for Reservation</h3>
       </div>
       <ErrorAlert error={error} />
-      <form onSubmit={handleSubmit} className="d-flex justify-content-center">
+      <form onSubmit={handleSubmit} className="d-inline-flex p-2 bd-highlight">
         <label htmlFor="seat_reservation">
           Seat at:
           <select
@@ -78,10 +78,10 @@ export default function Seat() {
             {options}
           </select>
         </label>
-        <button className="btn btn-primary mr-1" type="submit">
+        <button className="btn btn-primary btn-lg mr-1" type="submit">
           Submit
         </button>
-        <button className="btn btn-secondary" onClick={handleCancel}>
+        <button className="btn btn-secondary btn-lg" onClick={handleCancel}>
           Cancel
         </button>
       </form>

@@ -19,7 +19,7 @@ function Menu() {
           <div className="sidebar-brand-text mx-3">
             <span>Periodic Tables</span>
           </div>
-        </Link>
+        </Link>  
         <hr className="sidebar-divider my-0" />
         <ul className="nav navbar-nav text-light" id="accordionSidebar">
           <li className="nav-item">

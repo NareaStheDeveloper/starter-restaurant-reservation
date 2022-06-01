@@ -23,7 +23,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
       <td>
         {reservation.status === "booked" ? (
           <a
-            className="btn btn-secondary"
+            className="btn btn-success"
             role="button"
             href={`/reservations/${reservation.reservation_id}/seat`}
           >
@@ -33,7 +33,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
       </td>
       <td>
         <a
-          className="btn btn-secondary"
+          className="btn btn-warning"
           role="button"
           href={`/reservations/${reservation.reservation_id}/edit`}
         >
