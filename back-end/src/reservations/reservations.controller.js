@@ -1,6 +1,6 @@
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const service = require("./reservations.service");
-const dateTime = require("../utils/dateTime");
+const dateTime = require("../utils/date-time");
 
 const { today } = dateTime;
 
