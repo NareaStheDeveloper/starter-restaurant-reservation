@@ -2,6 +2,7 @@ const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const service = require("./reservations.service");
 const dateTime = require("../utils/dateTime");
 
+
 //valid properties to look for 
 const VALID_PROPS = [
   "first_name",
@@ -75,7 +76,7 @@ function isNotOnTuesday(req, res, next) {
 //checks that reservation is not on a day in the past
 function isInTheFuture(req, res, next) {
   const date = res.locals.date;
-  const today = today();
+  const today = new Date();
   if (date < today) {
     return next({ status: 400, message: "Must be a future date" });
   }
