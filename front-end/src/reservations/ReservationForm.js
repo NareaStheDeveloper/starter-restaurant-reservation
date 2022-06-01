@@ -91,15 +91,17 @@ export default function Form({
           />
         </fieldset>
         <div className="d-flex justify-content-center pt-2">
-          <button type="submit" className="btn btn-primary mr-1">
-            Submit
+          <button type="submit" className="btn btn-primary btn-md mr-1">
+            <span className="oi oi-check"></span>
+            &nbsp;&nbsp;Submit
           </button>
           <button
             type="button"
-            className="btn btn-secondary"
+            className="btn btn-danger btn-md mr-2 cancel"
             onClick={handleCancel}
           >
-            Cancel
+            <span className="oi oi-x "></span>
+            &nbsp;&nbsp;Cancel
           </button>
         </div>
       </form>

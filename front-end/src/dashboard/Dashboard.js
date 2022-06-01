@@ -55,10 +55,12 @@ function Dashboard({ date }) {
           TODAY
         </button>
         <button className="btn btn-primary btn-sm mr-1" onClick={handlePrev}>
-          PREVIOUS
+        <span className="oi oi-chevron-left"></span>
+        &nbsp;&nbsp;PREVIOUS
         </button>
         <button className="btn btn-primary btn-sm mr-1" onClick={handleNext}>
-          NEXT
+          NEXT&nbsp;&nbsp;
+          <span className="oi oi-chevron-right"></span>
         </button>
       </div>
       <ErrorAlert error={reservationsError} />

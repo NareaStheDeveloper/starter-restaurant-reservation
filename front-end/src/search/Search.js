@@ -48,7 +48,8 @@ export default function Search() {
           />
           <div className="pt-2">
             <button type="submit" className="btn btn-primary btn-lg">
-              Find
+            <span className="oi oi-magnifying-glass"></span>
+            &nbsp;&nbsp; Find              
             </button>
           </div>
         </form>

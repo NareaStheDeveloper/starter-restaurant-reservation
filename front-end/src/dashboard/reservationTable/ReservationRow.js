@@ -27,7 +27,8 @@ export default function ReservationRow({ reservation, cancelRes }) {
             role="button"
             href={`/reservations/${reservation.reservation_id}/seat`}
           >
-            Seat
+            <span className="oi oi-bell"></span>
+            &nbsp;&nbsp;Seat
           </a>
         ) : null}
       </td>
@@ -37,7 +38,8 @@ export default function ReservationRow({ reservation, cancelRes }) {
           role="button"
           href={`/reservations/${reservation.reservation_id}/edit`}
         >
-          Edit
+          <span className="oi oi-pencil"></span>
+          &nbsp;&nbsp;Edit
         </a>
       </td>
       <td>
@@ -46,7 +48,8 @@ export default function ReservationRow({ reservation, cancelRes }) {
           data-reservation-id-cancel={reservation.reservation_id}
           onClick={handleCancel}
         >
-          Cancel
+           <span className="oi oi-x"></span>
+           &nbsp;&nbsp;Cancel
         </button>
       </td>
     </tr>
