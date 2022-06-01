@@ -150,11 +150,7 @@ const reservationExists = async (req, res, next) => {
 
 //CRUD
 
-/*async function list(req, res) {
- 
-  const data = await service.list(req.query.date ? req.query.date : currentDay);
-  res.json({ data });
-} */
+
 async function list(req, res) {
    const currentDay = new Date();
   const { date, mobile_number } = req.query;
