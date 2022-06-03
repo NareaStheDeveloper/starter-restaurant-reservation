@@ -53,6 +53,7 @@ export default function Form({
               value={initialformData?.mobile_number}
               onChange={handleFormChange}
               required
+              
             />
           </div>
           <div className="pb-1">
