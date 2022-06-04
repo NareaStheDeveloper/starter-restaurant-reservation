@@ -53,13 +53,14 @@ export default function Reservations() {
   };
 
   return (
-    <>
+    <div className="card-main col-md-8 p-4">
+      <h1>Create New Reservation</h1>
       <ErrorAlert error={reservationsError} />
       <Form
         initialformData={formData}
         handleFormChange={handleFormChange}
         handleSubmit={handleSubmit}
       />
-    </>
+    </div>
   );
 }
