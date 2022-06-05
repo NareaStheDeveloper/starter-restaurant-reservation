@@ -9,10 +9,12 @@
   background-color: #F0C808;
 }
 
+
 h8 {
   padding-left: 30px;
-  font: bold 40px arial, sans-serif;
-  background-color: #9b9b9b;
+  font-family: 'Anton', sans-serif;
+  font-size: 25px;
+  background-color: #030303;
   color: transparent;
   text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
   -webkit-background-clip: text;
@@ -22,21 +24,27 @@ h8 {
 
 h4 {
   font: sans-serif;
-  padding-top: 60px;
+  font-size: 60px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+  text-align: center;
+
 }
 
 body {
  /* background-color: #0D1F22; */
   overflow-y: hidden;
-  color: #8B7404;
+  color: #eac407;
   background-color: #a9bdbd;
-  /* background-image: url();
-  background-size: 400px; */
+   background-image: url("./images/background.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   font-family: sans-serif;
 }
 
 .header-logo {
-  font-family: sans-serif;
+  font-family: 'Anton', sans-serif;
   font-weight: semi-bold;
   font-size: 100px;
   line-height: 50%;
@@ -45,6 +53,7 @@ body {
   text-align: center;
   text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .40);
 }
+
 
 .padded {
   padding: 20px;
@@ -59,6 +68,8 @@ html {
 }
 
 .card-main {
+  align-items: center;
+  font-family: 'Anton', sans-serif;
   background-color: #944654;
   border-radius: 1.25rem;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .30);
@@ -70,6 +81,8 @@ html {
 }
 
 .card-body {
+  font-family: "arial" !important; 
+  text-align: center;
   background-color: #b58900;
   border: #b58900;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .30);

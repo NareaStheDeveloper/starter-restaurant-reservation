@@ -3,7 +3,7 @@ import ReservationTable from "./reservationTable/ReservationTable";
 import { listReservations, listTables } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
 import { useHistory, Link } from "react-router-dom";
-import { previous, next, today } from "../utils/date-time";
+import { previous, next } from "../utils/date-time";
 import TableList from "./tableList/TableList";
 
 /**
@@ -93,33 +93,40 @@ function Dashboard({ date }) {
             </div>
           </div>
         </div>
+        <div className="justify-content-center">
         <h4 className="mb-0">Date: {date}</h4>
+        </div>
 
-        <div className="mb-3">
-          <button className="btn btn-info btn-sm mr-1" onClick={handlePrev}>
+        <div className="mb-3 justify-content-center">
+          <button className="btn btn-warning btn-sm mr-1" onClick={handlePrev}>
             <span className="oi oi-chevron-left"></span>
             &nbsp; Previous Day
           </button>
-          <button className="btn btn-outline-info btn-lg mr-1" onClick={handleToday}>
+          <button className="btn btn-outline-dark btn-lg mr-1" onClick={handleToday}>
             Today
           </button>
-          <button className="btn btn-info btn-sm mr-1" onClick={handleNext}>
+          <button className="btn btn-warning btn-sm mr-1" onClick={handleNext}>
             Next Day &nbsp;
             <span className="oi oi-chevron-right"></span>
           </button>
         </div>
+        <div>
         <ErrorAlert error={reservationsError} />
         <ReservationTable
           reservations={reservations}
           setReservations={setReservations}
           setError={setReservationsError}
         />
+        <div>
+        {addReservationButton}
+        </div>
         {!reservations.length ? (
           <div className="container p-3 text-center">
-            <h4>No reservations found for this date. 😒</h4>
-            {addReservationButton}
+            <h6>No reservations found for this date. 😒</h6>
+            
           </div>
         ) : null}
+        </div>
       </div>
       {/* <h1 className="d-md-flex justify-content-center">Dashboard</h1> */}
       

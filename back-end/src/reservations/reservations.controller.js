@@ -48,6 +48,12 @@ function isValidReservation(req, res, next) {
         message: `${reservation[field]} is not a number type for people field.`,
       });
     }
+    if(field === "mobile_number" && reservation[field].length > 10) {
+        return next({
+          status: 400,
+          message: `Mobile number cannot be longer than 10 digits.`
+        })
+    }
 
     if (field === "reservation_date" && !Date.parse(reservation[field])) {
       return next({ status: 400, message: `${field} is not a valid date.` });

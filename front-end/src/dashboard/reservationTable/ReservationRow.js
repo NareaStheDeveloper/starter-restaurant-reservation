@@ -20,7 +20,9 @@ export default function ReservationRow({ reservation, cancelRes }) {
     </button>
   )
 
+
   return (
+    
     <div className="card text-white m-3 my-4 row-md-2 border-0 ">
       <h5 className="card-header "> Reservation ID: {reservation.reservation_id} </h5>
       <div className="card-body p-4 ">
@@ -31,15 +33,16 @@ export default function ReservationRow({ reservation, cancelRes }) {
         <p className="card-text">Mobile number: {reservation.mobile_number} </p>
         <p className="card-text">
           Date/Time: {reservation.reservation_date.slice(0, 10)} /
-          {reservation.reservation_time.slice(0, 5)}
+          ({reservation.reservation_time.slice(0, 5)})
         </p>
         <p
           className="card-text"
           data-reservation-id-status={reservation.reservation_id}
         >
-          Status: {reservation.reservation_status}
+          Status: {reservation.status}
         </p>
-      </div>
+    </div>
+    <div className="card text-white m-3 my-4 row-md-2 border-0 ">
       {reservation.status === "Booked" ? (
          <div className=" dark-bg container px-1 pb-3 pe-3">
           <div className="row dark-bg pt-3 mx-2 justify-content-between">
@@ -65,7 +68,9 @@ export default function ReservationRow({ reservation, cancelRes }) {
             </div>
           </div>
         </div>
+        
         ) : null}
+        </div>
     </div>
   );
 }
