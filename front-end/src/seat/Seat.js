@@ -64,28 +64,25 @@ export default function Seat() {
         <h3>Select Table for Reservation</h3>
       </div>
       <ErrorAlert error={error} />
-      <form onSubmit={handleSubmit} className="d-inline-flex p-2 bd-highlight btn-lg">
+      <form onSubmit={handleSubmit} className="d-flex justify-content-center">
         <label htmlFor="seat_reservation">
           Seat at:
           <select
             id="table_id"
             name="table_id"
             onChange={handleSelectTable}
-            className="btn-sm mr-1"
+            className="mr-1"
             required
           >
             <option defaultValue>Select a table</option>
             {options}
           </select>
         </label>
-        <button className="btn btn-primary btn-lg mr-1" type="submit">
-          <span className="oi oi-check"></span>
+        <button className="btn btn-primary mr-1" type="submit">
           Submit
         </button>
-        <button className="btn btn-danger btn-lg" onClick={handleCancel}>
-          <span className="oi oi-x"></span>
+        <button className="btn btn-secondary" onClick={handleCancel}>
           Cancel
-          
         </button>
       </form>
     </>
