@@ -53,7 +53,6 @@ export default function Form({
               value={initialformData?.mobile_number}
               onChange={handleFormChange}
               required
-              
             />
           </div>
           <div className="pb-1">
@@ -92,17 +91,15 @@ export default function Form({
           />
         </fieldset>
         <div className="d-flex justify-content-center pt-2">
-          <button type="submit" className="btn btn-primary btn-md mr-1">
-            <span className="oi oi-check"></span>
-            &nbsp;&nbsp;Submit
+          <button type="submit" className="btn btn-primary mr-1">
+            Submit
           </button>
           <button
             type="button"
-            className="btn btn-danger btn-md mr-2 cancel"
+            className="btn btn-secondary"
             onClick={handleCancel}
           >
-            <span className="oi oi-x "></span>
-            &nbsp;&nbsp;Cancel
+            Cancel
           </button>
         </div>
       </form>

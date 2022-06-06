@@ -9,7 +9,7 @@ import Reservations from "../reservations/Reservations";
 import Tables from "../tables/Tables";
 import Seat from "../seat/Seat";
 import Search from "../search/Search";
-import Edit from "../reservations/EditReservations";
+import Edit from "../reservations/Edit";
 
 /**
  * Defines all the routes for the application.
