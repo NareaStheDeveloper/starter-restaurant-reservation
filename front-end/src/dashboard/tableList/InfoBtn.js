@@ -2,8 +2,9 @@ import React from "react";
 import { useHistory } from "react-router";
 import { unassignTable } from "../../utils/api";
 
-export default function FinishButton({ status, table, loadDashboard }) {
-  const history = useHistory();
+export default function InfoButton({ status, table, loadDashboard }) {
+    const [tableInfo, setTableInfo] = useState([]);
+    const history = useHistory();
 
   async function handleClick() {
     return window.confirm(
@@ -22,10 +23,11 @@ export default function FinishButton({ status, table, loadDashboard }) {
   return (
     status === "Occupied" && (
       <td>
-        <button className="form-control btn btn-md btn-info"
+        <button
           data-table-id-finish={table.table_id}
+          type="button"
           onClick={handleClick}
-         
+          className="btn btn-md btn-info"
         >
           <span className="oi oi-check"></span>
           &nbsp;&nbsp;Finish

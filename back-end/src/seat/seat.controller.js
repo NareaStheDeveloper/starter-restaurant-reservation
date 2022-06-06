@@ -72,6 +72,7 @@ async function update(req, res, next) {
   res.status(200).json({ data: reservation_id });
 }
 
+
 async function unassign(req, res, next) {
   const { table_id } = req.params;
   const reservation = await reservationService.finish(

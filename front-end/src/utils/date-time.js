@@ -95,6 +95,6 @@ export function isInTheFuture(reservation_date, errors) {
   const date = new Date(`${month} ${day}, ${year}`);
   const today = new Date();
   if (date < today) {
-    errors.push(<li key="past">Reservation must be in the future</li>);
+    errors.push(<li key="past">Reservation must be booked 24 hours ahead of desired reservation time.</li>);
   }
 }

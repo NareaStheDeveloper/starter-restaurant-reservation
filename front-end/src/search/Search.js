@@ -9,6 +9,7 @@ export default function Search() {
   const [mobile, setMobile] = useState("");
   const [error, setError] = useState(null);
 
+  
   function changeHandler(e) {
     setMobile(e.target.value);
   }
@@ -31,13 +32,13 @@ export default function Search() {
 
   return (
     <>
-      <div className="d-flex justify-content-center pt-3">
+      <div className="btn btn-light btn-sm my-sm-0">
         <h3>Search</h3>
       </div>
       <ErrorAlert error={error} />
       <div className="pt-3 pb-3">
         <form className="form-group" onSubmit={searchHandler}>
-          <input
+         { <input
             name="mobile_number"
             id="mobile_number"
             onChange={changeHandler}
@@ -45,7 +46,7 @@ export default function Search() {
             value={mobile}
             className="form-control"
             required
-          />
+          />}
           <div className="pt-2">
             <button type="submit" className="btn btn-primary btn-lg">
             <span className="oi oi-magnifying-glass"></span>
@@ -68,5 +69,5 @@ export default function Search() {
         </div>
       )}
     </>
-  );
+    );
 }

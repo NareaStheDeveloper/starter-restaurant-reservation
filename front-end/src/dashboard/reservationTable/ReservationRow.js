@@ -19,6 +19,8 @@ export default function ReservationRow({ reservation, cancelRes }) {
       &nbsp;&nbsp;Cancel
     </button>
   )
+  
+
 
 
   return (
@@ -33,7 +35,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
         <p className="card-text">Mobile number: {reservation.mobile_number} </p>
         <p className="card-text">
           Date/Time: {reservation.reservation_date.slice(0, 10)} /
-          ({reservation.reservation_time.slice(0, 5)})
+          {reservation.reservation_time.slice(0, 5)}
         </p>
         <p
           className="card-text"
@@ -42,35 +44,36 @@ export default function ReservationRow({ reservation, cancelRes }) {
           Status: {reservation.status}
         </p>
     </div>
-    <div className="card text-white m-3 my-4 row-md-2 border-0 ">
-      {reservation.status === "Booked" ? (
+      {reservation.status === "booked" ? (
          <div className=" dark-bg container px-1 pb-3 pe-3">
           <div className="row dark-bg pt-3 mx-2 justify-content-between">
-          <div className="col p-0">{cancelButton}</div>
-            <div className="col-auto p-0">
-              <a
-                className="btn btn-success"
-                role="button"
+          <div className="col p-0">
+            {cancelButton}
+             </div>
+            <div className="col-auto p-0 mr-3">
+              <button
+                className="btn btn-warning"
                 href={`/reservations/${reservation.reservation_id}/seat`}
               >
                 <span className="oi oi-bell"></span>
                 &nbsp;&nbsp; Seat
-              </a>
-
-              <a
+              </button>
+                </div>
+                <div className="col-auto p-0">
+              <button
                 className="btn btn-warning"
-                role="button"
+            
                 href={`/reservations/${reservation.reservation_id}/edit`}
               >
                 <span className="oi oi-pencil"></span>
                 &nbsp;&nbsp;Edit
-              </a>
+              </button>
             </div>
           </div>
         </div>
         
         ) : null}
-        </div>
+      
     </div>
   );
 }

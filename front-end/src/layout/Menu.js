@@ -28,7 +28,8 @@ function Menu() {
       <Link
         className="navbar-brand logo white-text font-weight-bold"
         to="/"
-      > <h8>reServed.</h8>
+      >
+       <h8>reServed.</h8>
       </Link>  
       <button
         className="navbar-toggler"
@@ -62,6 +63,8 @@ function Menu() {
               </Link>
             </li>
           </ul>
+          <div>
+            <div>
           <form className="form-inline"> 
             <input 
               className="form-control mr-2"
@@ -75,12 +78,14 @@ function Menu() {
             <div>
             <button
               className="btn btn-light btn-sm my-sm-0"
-              // id="sidebarToggle"
-              // type="button"  
+               id="sidebarToggle"
+               type="button"  
               onClick={handleSubmit}
             >Search</button>
             </div>
           </form>
+          </div>
+          </div>
         </div>
     </nav>
   );

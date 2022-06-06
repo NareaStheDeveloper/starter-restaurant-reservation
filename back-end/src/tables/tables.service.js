@@ -15,4 +15,9 @@ function read(table_id) {
   return knex("tables").select("*").where({ table_id }).first();
 }
 
-module.exports = { list, create, read };
+function destroy(table_id) {
+  return knex("tables")
+  .select("*")
+  .where({ table_id }).del();
+}
+module.exports = { list, create, read, delete: destroy, };

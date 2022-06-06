@@ -20,15 +20,25 @@ h8 {
   -webkit-background-clip: text;
      -moz-background-clip: text;
           background-clip: text;
+
 }
 
 h4 {
   font: sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
   text-align: center;
 
 }
+
+button {
+  font-family: 'Anton', sans-serif;
+  outline: none;
+  /*border: 1px solid #ff7e00;*/
+  box-shadow: 2px 2px 2px #3f3f3f ;
+ 
+}
+
 
 body {
  /* background-color: #0D1F22; */
@@ -77,6 +87,8 @@ html {
 }
 
 .card-text {
+  font-family: 'Akshar', sans-serif;
+  font-size: 18px;
   color: rgb(231, 224, 224);
 }
 
@@ -95,11 +107,13 @@ html {
 }
 
 .nav-link {
+  font-family: 'Anton', sans-serif;
   color: #944654 !important;
   padding: 0;
 }
 
 .form-control {
+  font-family: 'Anton', sans-serif;
   background-color: #C1ABA6;
 }
 
