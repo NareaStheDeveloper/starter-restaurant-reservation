@@ -41,16 +41,17 @@ button {
 
 
 body {
- /* background-color: #0D1F22; */
-  overflow-y: hidden;
-  color: #eac407;
-  background-color: #a9bdbd;
-   background-image: url("./images/background.jpeg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* background-color: #0D1F22; */
+  /* background-color: #a9bdbd; */
+  background: url("./images/background.jpeg") no-repeat center center fixed;
+  background-size: cover;
   font-family: sans-serif;
+  color: #eac407;
+  opacity: 0.9;
+  overflow-y: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 .header-logo {
@@ -61,7 +62,7 @@ body {
   margin-bottom: 50px;
   margin-top: 120px;
   text-align: center;
-  text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .40);
+  text-shadow: 0 .6rem 1rem rgba(0, 0, 0, .80);
 }
 
 
@@ -75,11 +76,13 @@ html {
 
 .card {
   background-color: #1f424b;
+  border-radius: 15px 15px;
 }
 
 .card-main {
   align-items: center;
-  font-family: 'Anton', sans-serif;
+  /* font-family: 'Anton', sans-serif; */
+  font-family: 'Gothic A1', sans-serif;
   background-color: #944654;
   border-radius: 1.25rem;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .30);
@@ -87,16 +90,20 @@ html {
 }
 
 .card-text {
-  font-family: 'Akshar', sans-serif;
+  font-family: 'Gothic A1', sans-serif;
   font-size: 18px;
-  color: rgb(231, 224, 224);
+  /* font-weight: 900px; */
+  /* color: rgb(231, 224, 224); */
+  color: #1f424b;
 }
 
 .card-body {
-  font-family: "arial" !important; 
+  /* font-family: "arial" !important;  */
+  font-family: 'Gothic A1', sans-serif;
   text-align: center;
-  background-color: #b58900;
-  border: #b58900;
+  background-color: #d5b206;
+  border: 2px solid #b58900;
+  /* border-radius: 0 0 15px 50px; */
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .30);
 }
 
@@ -107,13 +114,15 @@ html {
 }
 
 .nav-link {
-  font-family: 'Anton', sans-serif;
+  /* font-family: 'Anton', sans-serif; */
+  font-family: 'Gothic A1', sans-serif;
   color: #944654 !important;
   padding: 0;
 }
 
 .form-control {
-  font-family: 'Anton', sans-serif;
+  /* font-family: 'Anton', sans-serif; */
+  font-family: 'Gothic A1', sans-serif;
   background-color: #C1ABA6;
 }
 

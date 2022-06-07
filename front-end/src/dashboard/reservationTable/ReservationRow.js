@@ -28,7 +28,7 @@ export default function ReservationRow({ reservation, cancelRes }) {
     <div className="card text-white m-3 my-4 row-md-2 border-0 ">
       <h5 className="card-header "> Reservation ID: {reservation.reservation_id} </h5>
       <div className="card-body p-4 ">
-        <p className="card-text"> 
+        <p className="card-text text-black-50"> 
           Name: {reservation.first_name} {reservation.last_name}
         </p>
         <p className="card-text">People: {reservation.people} </p>

@@ -84,7 +84,7 @@ function Menu() {
             >Search</button>
             </div>
           </form>
-          </div>
+  </div>
           </div>
         </div>
     </nav>
