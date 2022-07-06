@@ -37,7 +37,7 @@ async function tableIsValid(req, res, next) {
   const { table_id } = req.params;
   const currentTable = await tableService.read(table_id);
   const reservation = res.locals.reservation;
-  if (reservation.people > currentTable.capacity) {
+  if (currentTable.capacity < reservation.people) {
     return next({
       status: 400,
       message: "Table does not have enough capacity for reservation.",
@@ -71,7 +71,6 @@ async function update(req, res, next) {
   await service.update(table_id, reservation_id);
   res.status(200).json({ data: reservation_id });
 }
-
 
 async function unassign(req, res, next) {
   const { table_id } = req.params;

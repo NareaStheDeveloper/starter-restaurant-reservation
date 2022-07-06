@@ -60,34 +60,51 @@ export default function Seat() {
 
   return (
     <>
+    <div className="card-main">
+      <div className="card-font">
       <div className="d-flex justify-content-center pt-3">
         <h3>Select Table for Reservation</h3>
       </div>
       <ErrorAlert error={error} />
-      <form onSubmit={handleSubmit} className="d-inline-flex p-2 bd-highlight btn-lg">
+      <form onSubmit={handleSubmit} className="d-flex justify-content-center">
+        <div>
         <label htmlFor="seat_reservation">
-          Seat at:
+          Seat at: &nbsp;&nbsp;
           <select
             id="table_id"
             name="table_id"
             onChange={handleSelectTable}
-            className="btn-sm mr-1"
+            className="mr-1"
             required
           >
             <option defaultValue>Select a table</option>
             {options}
           </select>
         </label>
-        <button className="btn btn-primary btn-lg mr-1" type="submit">
+        </div>
+        <div className=" dark-bg container px-0 pb-3 pe-3 ">
+        <div className="row dark-bg pt-3 pl-3 justify-content-center">
+            <div className="col-auto p-0 ml-3 mr-3">
+        <button className="btn btn-warning " type="submit">
           <span className="oi oi-check"></span>
-          Submit
+          &nbsp;&nbsp;Submit
         </button>
-        <button className="btn btn-danger btn-lg" onClick={handleCancel}>
+         </div>
+         <div className="col-auto p-0 ml-3 mr-3">
+        <button className="btn btn-danger" onClick={handleCancel}>
           <span className="oi oi-x"></span>
-          Cancel
-          
+          &nbsp;&nbsp;Cancel
         </button>
+        </div>
+        </div>
+      
+      </div>
+      
+      
       </form>
+     
+      </div>
+      </div>
     </>
   );
 }

@@ -5,8 +5,8 @@ import { useHistory } from "react-router-dom";
 
 export default function ReservationTable({
   reservations,
-  // setReservations,
-  // setError,
+   setReservations,
+   setError,
 }) {
   const history = useHistory();
   if (!reservations) {
@@ -22,11 +22,11 @@ export default function ReservationTable({
         }
         return res;
       });
-      // setReservations(updated);
+       setReservations(updated);
       history.go(`/dashboard?date=${reservation.reservation_date}`);
     } catch (error) {
-      // setError(error);
-      console.log("Reseveration Table line 29: ", error)
+       setError(error);
+      //console.log("Reseveration Table line 29: ", error)
     }
   }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
-import { unassignTable, deleteTable } from "../../utils/api";
-//import DeleteTableButton from "./DeleteBtn";
+import { unassignTable } from "../../utils/api";
+
 
 export default function TableInfo({ table, loadDashboard }) {
   const history = useHistory();
@@ -14,7 +14,7 @@ export default function TableInfo({ table, loadDashboard }) {
       unassignTable(table.table_id, table.reservation_id).then(() => history.push("/"))
     }
   }
-  function handleTrashClick() {
+  /*function handleTrashClick() {
     if(
       window.confirm(
       "Delete this table? You will not be able to recover it."
@@ -29,11 +29,13 @@ export default function TableInfo({ table, loadDashboard }) {
     type="button"
     onClick={handleTrashClick}
     className="btn btn-md btn-danger"
+    href={`/tables/${table.table_id}`}
   >
+    
     <span className="oi oi-trash" />
   </button>
   )
-
+*/
   const finishBTN = (
     <button
       data-table-id-finish={table.table_id}
@@ -41,22 +43,22 @@ export default function TableInfo({ table, loadDashboard }) {
       onClick={handleClick}
       className="btn btn-md btn-warning"
     >
-      <span className="bi bi-plus-square"></span>
+      <span className="oi oi-check"></span>
       &nbsp;&nbsp;Finish
     </button>
   )
   return (
-    <div className="card m-3 row-md-2 border-0">
-      <div className="card-body">
-        <div className="text-bold"><h5>Table: {table.table_name}</h5></div>
+    <div className="card text-white m-3 my-4 row-md-2 border-0 ">
+      <h5 className="card-header "> Table: {table.table_name} </h5>
+      <div className="card-body p-4 ">
         
-        <p className="card-text pb-0 mb-0">Capacity: {table.capacity}</p>
-        <p  className="card-text" data-table-id-status={table.table_id}>
+        <p className="card-text pb-0 mb-1">Capacity: {table.capacity}</p>
+        <p  className="card-text mb-1" data-table-id-status={table.table_id}>
           Status: {table.reservation_id ? "Occupied" : "Free"}
         </p>
-        <p className="card-text mt-0">Reservation ID: {table.reservation_id ? table.reservation_id : null} </p>
+    
+        <p className="card-text mt-0">Reservation ID: {table.reservation_id ? table.reservation_id :"N/A"} </p>
         {table.reservation_id ? finishBTN : null}
-         {!table.reservation_id ? trashBtn : null}
         
       </div>
     </div>

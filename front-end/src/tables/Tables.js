@@ -37,6 +37,7 @@ export default function Tables() {
 
   return (
     <>
+    <div className="card-main">
       <div className="d-flex justify-content-center pt-3">
         <h3>Create a New Table</h3>
       </div>
@@ -47,7 +48,7 @@ export default function Tables() {
           name="table_name"
           className="form-control mb-1"
           id="table_name"
-          placeholder="Table"
+          placeholder="Table Name, please include # prefix"
           value={tableForm.table_name}
           onChange={handleFormChange}
           minLength={2}
@@ -64,8 +65,10 @@ export default function Tables() {
           min="1"
           required
         />
+        <div className=" dark-bg container px-0 pb-3 pe-3 ">
+        <div className="row dark-bg pt-3 pl-3 justify-content-center">
         <div className="d-flex justify-content-center">
-          <button type="submit" className="btn btn-primary btn-md mr-1">
+          <button type="submit" className="btn btn-warning btn-md mr-1">
           <span className="oi oi-check"></span>
           &nbsp;&nbsp; Submit            
           </button>
@@ -77,8 +80,11 @@ export default function Tables() {
              <span className="oi oi-x"></span>
              &nbsp;&nbsp;Cancel
           </button>
+            </div>
+          </div>
         </div>
       </form>
+      </div>
     </>
   );
 }

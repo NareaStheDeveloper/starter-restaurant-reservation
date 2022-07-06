@@ -18,10 +18,9 @@ function isValidTable(req, res, next) {
   if (typeof table["capacity"] !== "number") {
     return next({
       status: 400,
-      message: "capacity must be a number",
+      message: "capacity must be a number greater than 0",
     });
   }
-  
 
   if (table["table_name"].length < 2) {
     return next({
@@ -46,15 +45,8 @@ async function create(req, res, next) {
   res.status(201).json({ data: table });
 }
 
-async function destroy(req, res){
-  const { table } = res.locals;
-  await service.delete(table.table_id);
-  res.sendStatus(204)
-}
-
 module.exports = {
   list: asyncErrorBoundary(list),
   create: [isValidTable, asyncErrorBoundary(create)],
   isValidTable,
-  delete: [asyncErrorBoundary(destroy)]
 };

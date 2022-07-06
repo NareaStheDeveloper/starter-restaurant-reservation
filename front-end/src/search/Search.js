@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useQuery from "../utils/useQuery";
-import { listReservations, search } from "../utils/api";
+import { listReservations } from "../utils/api";
 import ReservationTable from "../dashboard/reservationTable/ReservationTable";
 import ErrorAlert from "../layout/ErrorAlert";
 
@@ -45,7 +45,7 @@ export default function Search() {
       ...currentState,
       loading: true,
     }));
-    search(phoneNumber, ac.signal)
+    listReservations({mobile_number: phoneNumber}, ac.signal)
       .then((response) => 
         setStateForm((currentState) => ({
           ...currentState,
@@ -67,6 +67,7 @@ export default function Search() {
     event.preventDefault();
     loadResults(number);
   }
+  
 
   const noReservationsFound = (
     <div className="row justify-content-center">

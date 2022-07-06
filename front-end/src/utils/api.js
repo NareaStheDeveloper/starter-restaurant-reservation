@@ -98,16 +98,6 @@
    return await fetchJson(url, { headers, signal }, []);
  }
  
- //deletes a table
-  export async function deleteTable(table_id, signal){
-    const url =  `${API_BASE_URL}/tables/${table_id}`;
-    const options = {
-      method: "DELETE",
-      signal
-    }
-    return await fetchJson(url, options)
-  }
- 
  //Seats a reservation at a table
  export async function seatReservation(table_id, reservation_id, signal) {
    const url = new URL(`${API_BASE_URL}/tables/${table_id}/seat`);
@@ -161,14 +151,4 @@
      signal,
    };
    return await fetchJson(url, options, []);
- }
-
- export async function search(number, signal) {
-  const url = new URL(`${API_BASE_URL}/reservations.mobile_number=${number}`);
-  const options = {
-    method: "GET",
-    headers,
-    signal,
-  };
-  return await fetchJson(url, options, {});
  }

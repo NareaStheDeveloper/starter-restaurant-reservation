@@ -66,14 +66,6 @@ function Dashboard({ date }) {
     </button>
   );
 
- /* const loadingSpinner = (
-    <div className="d-flex justify-content-center p-5 m-5">
-      <div className="spinner-border" role="status">
-        <span className="visually-hidden"></span>
-      </div>
-    </div>
-  );
-  */
 
   return (
     <>
@@ -124,11 +116,11 @@ function Dashboard({ date }) {
           ) : null}
         </div>
       </div>
-
-      <div className="padded col-lg-3 col-md-5 col-sm-12 col-xs-6 align-self-start m-3 card-main">
+        
+      <div className="padded col-lg-4 col-md-5 col-sm-12 col-xs-6 align-self-start m-3 card-main">
         <div className="text-center">
           <div className="row justify-content-center">
-            <div className="col-auto p-1">
+            <div className="col-auto p-0">
               <h2>Tables {addTableButton}</h2>
             </div>
             <div className="col-auto plus-button p-1">
