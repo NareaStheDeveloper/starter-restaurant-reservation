@@ -67,7 +67,10 @@ export default function Seat() {
       </div>
       <ErrorAlert error={error} />
       <form onSubmit={handleSubmit} className="d-flex justify-content-center">
+<<<<<<< HEAD
         <div>
+=======
+>>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
         <label htmlFor="seat_reservation">
           Seat at: &nbsp;&nbsp;
           <select
@@ -81,6 +84,7 @@ export default function Seat() {
             {options}
           </select>
         </label>
+<<<<<<< HEAD
         </div>
         <div className=" dark-bg container px-0 pb-3 pe-3 ">
         <div className="row dark-bg pt-3 pl-3 justify-content-center">
@@ -94,6 +98,13 @@ export default function Seat() {
         <button className="btn btn-danger" onClick={handleCancel}>
           <span className="oi oi-x"></span>
           &nbsp;&nbsp;Cancel
+=======
+        <button className="btn btn-primary mr-1" type="submit">
+          Submit
+        </button>
+        <button className="btn btn-secondary" onClick={handleCancel}>
+          Cancel
+>>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
         </button>
         </div>
         </div>

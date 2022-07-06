@@ -42,7 +42,7 @@ export default function ReservationTable({
 
   return (
     <>
-      {/* <table className="table table-sm table-striped table-bordered">
+      <table className="table table-sm table-striped table-bordered">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -58,8 +58,7 @@ export default function ReservationTable({
           </tr>
         </thead>
         <tbody>{formatted}</tbody>
-      </table> */}
-      {formatted}
+      </table>
     </>
   );
 }

@@ -4,7 +4,7 @@ import { createReservation } from "../utils/api";
 import { isNotOnTuesday } from "../utils/date-time";
 import { isInTheFuture } from "../utils/date-time";
 import ErrorAlert from "../layout/ErrorAlert";
-import Form from "./ReservationForm";
+import Form from "./Form";
 
 export default function Reservations() {
   const history = useHistory();
@@ -53,14 +53,13 @@ export default function Reservations() {
   };
 
   return (
-    <div className="card-main col-md-8 p-4">
-      <h1>Create New Reservation</h1>
+    <>
       <ErrorAlert error={reservationsError} />
       <Form
         initialformData={formData}
         handleFormChange={handleFormChange}
         handleSubmit={handleSubmit}
       />
-    </div>
+    </>
   );
 }
