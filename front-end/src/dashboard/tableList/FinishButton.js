@@ -22,11 +22,14 @@ export default function FinishButton({ status, table, loadDashboard }) {
   return (
     status === "Occupied" && (
       <td>
-        <button
+        <button className="form-control btn btn-md btn-info"
           data-table-id-finish={table.table_id}
-          type="button"
           onClick={handleClick}
+<<<<<<< HEAD:front-end/src/dashboard/tableList/FinishBtn.js
+         
+=======
           className="btn btn-sm btn-primary"
+>>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d:front-end/src/dashboard/tableList/FinishButton.js
         >
           Finish
         </button>

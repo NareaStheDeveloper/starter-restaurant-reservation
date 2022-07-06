@@ -91,8 +91,14 @@ export default function Form({
           />
         </fieldset>
         <div className="d-flex justify-content-center pt-2">
+<<<<<<< HEAD:front-end/src/reservations/ReservationForm.js
+          <button type="submit" className="btn btn-warning btn-md mr-1">
+            <span className="oi oi-check"></span>
+            &nbsp;&nbsp;Submit
+=======
           <button type="submit" className="btn btn-primary mr-1">
             Submit
+>>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d:front-end/src/layout/reservations/Form.js
           </button>
           <button
             type="button"

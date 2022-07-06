@@ -1,4 +1,151 @@
 .side-bar {
   background-color: #393a44;
   min-width: 200px;
+<<<<<<< HEAD
+} */
+
+.navbar.main-navbar {
+  justify-content: space-between;
+  color: transparent;
+  margin-bottom: 50px;
+  min-width: 200px;
+  background-color: #F0C808;
+}
+
+
+h7 {
+  padding-left: 20px;
+  padding-right: 20;
+  font-family: 'Anton', sans-serif;
+  font-size: 25px;
+  background-color: #030303;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+
+}
+
+h4 {
+  font: sans-serif;
+  font-size: 50px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+  text-align: center;
+
+}
+
+button {
+  font-family: 'Anton', sans-serif;
+  outline: none;
+  /*border: 1px solid #ff7e00;*/
+  box-shadow: 2px 2px 2px #3f3f3f ;
+ 
+}
+
+
+body {
+  /* background-color: #0D1F22; */
+  /* background-color: #a9bdbd; */
+  background: url("./images/background.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  color: #eac407;
+  opacity: 0.9;
+  overflow-y: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.header-logo {
+  font-family: 'Anton', sans-serif;
+  font-weight: semi-bold;
+  font-size: 100px;
+  line-height: 50%;
+  margin-bottom: 50px;
+  margin-top: 120px;
+  text-align: center;
+  text-shadow: 0 .6rem 1rem rgba(0, 0, 0, .80);
+}
+
+
+.padded {
+  padding: 20px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.card {
+  background-color: #1f424b;
+  border-radius: 15px 15px;
+}
+
+.card-main {
+  align-items: center;
+  /* font-family: 'Anton', sans-serif; */
+  font-family: 'Gothic A1', sans-serif;
+  background-color: #944654;
+  border-radius: 1.25rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .30);
+  max-width: 600px;
+}
+
+.card-font {
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 18px;
+   font-weight: 900px; 
+  /* color: rgb(231, 224, 224); */
+  color: #e4ae0a;
+}
+
+.card-text {
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 18px;
+  /* font-weight: 900px; */
+  /* color: rgb(231, 224, 224); */
+  color: #1f424b;
+}
+
+.card-body {
+  /* font-family: "arial" !important;  */
+  font-family: 'Gothic A1', sans-serif;
+  text-align: center;
+  background-color: #d5b206;
+  border: 2px solid #b58900;
+  /* border-radius: 0 0 15px 50px; */
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .30);
+}
+
+.plus-button {
+  right: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.card-button {
+  box-shadow: 2px 2px 2px #9f9b9b ;
+}
+
+.nav-link {
+  /* font-family: 'Anton', sans-serif; */
+  font-family: 'Gothic A1', sans-serif;
+  color: #944654 !important;
+  padding: 0;
+}
+
+.form-control {
+  /* font-family: 'Anton', sans-serif; */
+  font-family: 'Gothic A1', sans-serif;
+  background-color: #C1ABA6;
+}
+
+@media all and (min-width: 950px) {
+  .logo {
+    margin-right: 200px;
+  }
+=======
+>>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
 }

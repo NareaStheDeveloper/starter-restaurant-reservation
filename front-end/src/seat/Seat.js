@@ -60,13 +60,19 @@ export default function Seat() {
 
   return (
     <>
+    <div className="card-main">
+      <div className="card-font">
       <div className="d-flex justify-content-center pt-3">
         <h3>Select Table for Reservation</h3>
       </div>
       <ErrorAlert error={error} />
       <form onSubmit={handleSubmit} className="d-flex justify-content-center">
+<<<<<<< HEAD
+        <div>
+=======
+>>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
         <label htmlFor="seat_reservation">
-          Seat at:
+          Seat at: &nbsp;&nbsp;
           <select
             id="table_id"
             name="table_id"
@@ -78,13 +84,38 @@ export default function Seat() {
             {options}
           </select>
         </label>
+<<<<<<< HEAD
+        </div>
+        <div className=" dark-bg container px-0 pb-3 pe-3 ">
+        <div className="row dark-bg pt-3 pl-3 justify-content-center">
+            <div className="col-auto p-0 ml-3 mr-3">
+        <button className="btn btn-warning " type="submit">
+          <span className="oi oi-check"></span>
+          &nbsp;&nbsp;Submit
+        </button>
+         </div>
+         <div className="col-auto p-0 ml-3 mr-3">
+        <button className="btn btn-danger" onClick={handleCancel}>
+          <span className="oi oi-x"></span>
+          &nbsp;&nbsp;Cancel
+=======
         <button className="btn btn-primary mr-1" type="submit">
           Submit
         </button>
         <button className="btn btn-secondary" onClick={handleCancel}>
           Cancel
+>>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
         </button>
+        </div>
+        </div>
+      
+      </div>
+      
+      
       </form>
+     
+      </div>
+      </div>
     </>
   );
 }

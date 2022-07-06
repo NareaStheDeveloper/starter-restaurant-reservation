@@ -37,6 +37,11 @@ export default function Tables() {
 
   return (
     <>
+<<<<<<< HEAD
+      <div className="card-main">
+        <div className="d-flex justify-content-center pt-3">
+          <h3>Create a New Table</h3>
+=======
       <div className="d-flex justify-content-center pt-3">
         <h3>Create a New Table</h3>
       </div>
@@ -75,8 +80,52 @@ export default function Tables() {
           >
             Cancel
           </button>
+>>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
         </div>
-      </form>
+        <ErrorAlert error={tableError} />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="table_name"
+            className="form-control mb-1"
+            id="table_name"
+            placeholder="Table Name, please include # prefix"
+            value={tableForm.table_name}
+            onChange={handleFormChange}
+            minLength={2}
+            required
+          />
+          <input
+            type="number"
+            name="capacity"
+            className="form-control mb-1"
+            id="capacity"
+            placeholder="Number of guests"
+            value={tableForm.capacity}
+            onChange={handleFormChange}
+            min="1"
+            required
+          />
+          <div className=" dark-bg container px-0 pb-3 pe-3 ">
+            <div className="row dark-bg pt-3 pl-3 justify-content-center">
+              <div className="d-flex justify-content-center">
+                <button type="submit" className="btn btn-warning btn-md mr-1">
+                  <span className="oi oi-check"></span>
+                  &nbsp;&nbsp; Submit
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-danger btn-md"
+                  onClick={handleCancel}
+                >
+                  <span className="oi oi-x"></span>
+                  &nbsp;&nbsp;Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </>
   );
 }
