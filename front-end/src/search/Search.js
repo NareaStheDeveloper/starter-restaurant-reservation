@@ -74,7 +74,6 @@ export default function Search() {
       <div className="card-main col-10 pb-4 mb-3 justify-content-center">
         <p>No reservations found for this number: {number}</p>
       </div>
-<<<<<<< HEAD
     </div>
   )
 
@@ -84,24 +83,6 @@ export default function Search() {
         <div className="d-flex col-10 p-5 m-5 justify-content-center">
           <div className="spinner-border" role="status">
             <span className="visually-hidden" />
-=======
-      <ErrorAlert error={error} />
-      <div className="pt-3 pb-3">
-        <form className="form-group" onSubmit={searchHandler}>
-          <input
-            name="mobile_number"
-            id="mobile_number"
-            onChange={changeHandler}
-            placeholder="Enter a customer's phone number"
-            value={mobile}
-            className="form-control"
-            required
-          />
-          <div className="pt-2">
-            <button type="submit" className="btn btn-primary">
-              Find
-            </button>
->>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
           </div>
         </div>
       </div>

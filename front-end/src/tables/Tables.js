@@ -37,50 +37,9 @@ export default function Tables() {
 
   return (
     <>
-<<<<<<< HEAD
       <div className="card-main">
         <div className="d-flex justify-content-center pt-3">
           <h3>Create a New Table</h3>
-=======
-      <div className="d-flex justify-content-center pt-3">
-        <h3>Create a New Table</h3>
-      </div>
-      <ErrorAlert error={tableError} />
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="table_name"
-          className="form-control mb-1"
-          id="table_name"
-          placeholder="Table"
-          value={tableForm.table_name}
-          onChange={handleFormChange}
-          minLength={2}
-          required
-        />
-        <input
-          type="number"
-          name="capacity"
-          className="form-control mb-1"
-          id="capacity"
-          placeholder="Number of guests"
-          value={tableForm.capacity}
-          onChange={handleFormChange}
-          min="1"
-          required
-        />
-        <div className="d-flex justify-content-center">
-          <button type="submit" className="btn btn-primary mr-1">
-            Submit
-          </button>
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={handleCancel}
-          >
-            Cancel
-          </button>
->>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
         </div>
         <ErrorAlert error={tableError} />
         <form onSubmit={handleSubmit}>
