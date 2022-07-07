@@ -1,9 +1,9 @@
 import React from "react";
-import FinishButton from "./FinishButton";
+import { useHistory } from "react-router";
+import { unassignTable } from "../../utils/api";
 
 
 export default function TableInfo({ table, loadDashboard }) {
-<<<<<<< HEAD
   const history = useHistory();
   function handleClick() {
     if(
@@ -62,22 +62,5 @@ export default function TableInfo({ table, loadDashboard }) {
         
       </div>
     </div>
-=======
-  const status = table.reservation_id ? "Occupied" : "Free";
-  return (
-    <>
-      <tr>
-        <th scope="row">{table.table_id}</th>
-        <td>{table.table_name}</td>
-        <td>{table.capacity}</td>
-        <td data-table-id-status={table.table_id}>{status}</td>
-        <FinishButton
-          status={status}
-          table={table}
-          loadDashboard={loadDashboard}
-        />
-      </tr>
-    </>
->>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
   );
 }

@@ -10,7 +10,6 @@ export default function ReservationRow({ reservation, cancelRes }) {
   }
 
   return (
-<<<<<<< HEAD
     <div className="card text-white m-3 my-4 row-md-2 border-0">
        <h5 className="card-header ">
         {" "}
@@ -74,47 +73,5 @@ export default function ReservationRow({ reservation, cancelRes }) {
       ) : null}
     </div>
     
-=======
-    <tr>
-      <th scope="row">{reservation.reservation_id}</th>
-      <td>{reservation.first_name}</td>
-      <td>{reservation.last_name}</td>
-      <td>{reservation.mobile_number}</td>
-      <td>{reservation.people}</td>
-      <td>{reservation.reservation_time}</td>
-      <td data-reservation-id-status={reservation.reservation_id}>
-        {reservation.status}
-      </td>
-      <td>
-        {reservation.status === "booked" ? (
-          <a
-            className="btn btn-secondary"
-            role="button"
-            href={`/reservations/${reservation.reservation_id}/seat`}
-          >
-            Seat
-          </a>
-        ) : null}
-      </td>
-      <td>
-        <a
-          className="btn btn-secondary"
-          role="button"
-          href={`/reservations/${reservation.reservation_id}/edit`}
-        >
-          Edit
-        </a>
-      </td>
-      <td>
-        <button
-          className="btn btn-danger"
-          data-reservation-id-cancel={reservation.reservation_id}
-          onClick={handleCancel}
-        >
-          Cancel
-        </button>
-      </td>
-    </tr>
->>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
   );
 }

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import ReservationTable from "./reservationTable/ReservationTable";
 import { listReservations, listTables } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { previous, next } from "../utils/date-time";
-import TableList from "./TableList/TableList";
+import TableList from "./tableList/TableList";
 
 /**
  * Defines the dashboard page.
@@ -15,8 +15,12 @@ import TableList from "./TableList/TableList";
 function Dashboard({ date }) {
   const [reservations, setReservations] = useState([]);
   const [tables, setTables] = useState([]);
+  // const [loading, setLoading] = useState({false})
   const [reservationsError, setReservationsError] = useState(null);
   const history = useHistory();
+  // const todaysDate = today();
+  // const nextDay = next(todaysDate);
+  // const previousDay = previous(todaysDate);
 
   useEffect(loadDashboard, [date]);
 
@@ -44,7 +48,6 @@ function Dashboard({ date }) {
     history.push(`/dashboard?date=${next(date)}`);
   }
 
-<<<<<<< HEAD
   const addReservationButton = (
     <button
       className="btn btn-warning btn-sm m-3"
@@ -135,35 +138,8 @@ function Dashboard({ date }) {
             <p>No Tables found</p>
           </div>
         ) : null}
-=======
-  return (
-    <main>
-      <h1 className="d-md-flex justify-content-center">Dashboard</h1>
-      <div className="d-md-flex mb-3 justify-content-center">
-        <h4 className="mb-0">Reservations for {date}</h4>
       </div>
-      <div className="pb-2 d-flex justify-content-center">
-        <button className="btn btn-primary mr-1" onClick={handleToday}>
-          today
-        </button>
-        <button className="btn btn-primary mr-1" onClick={handlePrev}>
-          previous
-        </button>
-        <button className="btn btn-primary" onClick={handleNext}>
-          next
-        </button>
-      </div>
-      <ErrorAlert error={reservationsError} />
-      <ReservationTable
-        reservations={reservations}
-        setReservations={setReservations}
-        setError={setReservationsError}
-      />
-      <div>
-        <TableList tables={tables} loadDashboard={loadDashboard} />
->>>>>>> 4b8901da868cea6c743cf0bb98beccac5d749f5d
-      </div>
-    </main>
+    </>
   );
 }
 
