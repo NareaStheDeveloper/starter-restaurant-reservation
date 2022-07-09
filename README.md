@@ -1,8 +1,11 @@
 
-.reServed
+# .reServed 
+## A Restaurant Management System
 
-Restaurant reservation system that allows users to create, edit, seat and cancel reservations. 
-User has the ability to add new tables to restaurant system to be sat.
-Search for reservations using reservation phone number!
+* Full-stack CRUDL application that allows restaurant owners to manage current and future reservations and table-openings.
+* Search function to allow users to find reservations using the mobile number given.
+* Easy access to creating additional tables and reservations.
+* Formatted for easy expansion.
 
-Run on live server using URL: 
+
+To demo on live server [click here!](https://reservedapp.herokuapp.com/dashboard) 
